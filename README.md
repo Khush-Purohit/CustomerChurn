@@ -15,7 +15,7 @@ The application uses two pre-trained machine learning models:
 - **Random Forest** (`random_forest_model.pkl`)
 - **Decision Tree** (`decision_tree_model.pkl`)
 
-## Setup
+## Setup (without docker)
 
 1. Install dependencies:
    ```bash
@@ -28,6 +28,22 @@ The application uses two pre-trained machine learning models:
    ```
 
 3. Open your browser and navigate to `http://localhost:5000`
+
+
+## Setup (with docker)
+
+1. Pull dockerhub repo:
+   ```bash
+   docker pull khushpurohit12/customerchurn:latest
+   ```
+
+2. Run the application:
+   ```bash
+   docker run -p 5000:5000 khushpurohit12/customerchurn
+   ```
+   
+3. Open your browser and navigate to `http://localhost:5000`
+
 
 ## Input Features
 
