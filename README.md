@@ -1,11 +1,13 @@
 # Telecom Customer Churn Prediction
 
-A Flask web application that predicts customer churn using machine learning models trained on telecom customer data.
+A Flask web application that predicts customer churn using machine learning models trained on telecom customer data and **automatically creates a docker image of the program(CI/CD Pipeline)**.
 
 ## Features
 
 - Interactive web interface for customer data input
 - Dual prediction models: Random Forest and Decision Tree
+- Get updated docker image everytime
+- No overhead to check for versions or any other installation, just pull the repo from docker hub and run it
 - Real-time churn prediction based on 19 customer attributes
 - Clean, responsive UI design
 
