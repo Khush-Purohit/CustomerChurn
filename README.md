@@ -24,7 +24,6 @@ The application uses two pre-trained machine learning models:
 
 2. Run the application:
    ```bash
-   cd telco-churn
    python app.py
    ```
 
