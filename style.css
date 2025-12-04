@@ -85,6 +85,8 @@ option {
 form .button{
     height: 34px;
     margin: 8px 0 8px 0;
+    display: flex;
+    justify-content: center;
 }
 
 form .button button{
@@ -115,4 +117,3 @@ form .button button{
     font-family: inherit;
     font-size: 20px;
 }
-

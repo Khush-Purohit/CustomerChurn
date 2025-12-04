@@ -1,23 +1,22 @@
-<!DOCTYPE html>
+<! DOCTYPE html>
 <html>
 
 <head>
     <title>Customer Churn Prediction</title>
-    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="container">
         <header>Customer Churn Prediction</header>
         
-        <!-- <form action="http://localhost:5000/" method="POST"> -->
-        <form action="/" method="POST">
+        <form id="predictionForm">
             <div class="user-details">
                 
                 <div class="input-box">
                     <label for="query1">Senior Citizen:</label>
                     <div>
-                        <select name="query1" required>
+                        <select name="query1" id="query1" required>
                             <option value="Yes">Yes</option>
                             <option value="No">No</option>
                         </select>
@@ -37,17 +36,18 @@
                 <div class="input-box">
                     <label for="query4">Gender:</label>
                     <div>
-                        <select name="query4" required>
+                        <select name="query4" id="query4" required>
                             <option value="Male">Male</option>
                             <option value="Female">Female</option>
                         </select>
                     </div>
                 </div>
                 
+                <!-- Keep all other input fields the same, just remove the form action -->
                 <div class="input-box">
                     <label for="query5">Partner:</label>
                     <div>
-                        <select name="query5" required>
+                        <select name="query5" id="query5" required>
                             <option value="Yes">Yes</option>
                             <option value="No">No</option>
                         </select>
@@ -57,7 +57,7 @@
                 <div class="input-box">
                     <label for="query6">Dependents:</label>
                     <div>
-                        <select name="query6" required>
+                        <select name="query6" id="query6" required>
                             <option value="Yes">Yes</option>
                             <option value="No">No</option>
                         </select>
@@ -67,7 +67,7 @@
                 <div class="input-box">
                     <label for="query7">Phone Service:</label>
                     <div>
-                        <select name="query7" required>
+                        <select name="query7" id="query7" required>
                             <option value="Yes">Yes</option>
                             <option value="No">No</option>
                         </select>
@@ -77,18 +77,17 @@
                 <div class="input-box">
                     <label for="query8">Multiple Lines:</label>
                     <div>
-                        <select name="query8" required>
+                        <select name="query8" id="query8" required>
                             <option value="Yes">Yes</option>
                             <option value="No">No</option>
                         </select>
                     </div>
-                    
                 </div>
                 
                 <div class="input-box">
                     <label for="query9">Internet Service:</label>
                     <div>
-                        <select name="query9" required>
+                        <select name="query9" id="query9" required>
                             <option value="DSL">DSL</option>
                             <option value="Fiber optic">Fiber Optic</option>
                             <option value="No">No</option>
@@ -99,103 +98,94 @@
                 <div class="input-box">
                     <label for="query10">Online Security:</label>
                     <div>
-                        <select name="query10" required>
+                        <select name="query10" id="query10" required>
                             <option value="Yes">Yes</option>
                             <option value="No">No</option>
                         </select>
                     </div>
-                    
                 </div>
                 
                 <div class="input-box">
                     <label for="query11">Online Backup:</label>
                     <div>
-                        <select name="query11" required>
+                        <select name="query11" id="query11" required>
                             <option value="Yes">Yes</option>
                             <option value="No">No</option>
                         </select>
                     </div>
-                    
                 </div>
                 
                 <div class="input-box">
                     <label for="query12">Device Protection:</label>
                     <div>
-                        <select name="query12" required>
+                        <select name="query12" id="query12" required>
                             <option value="Yes">Yes</option>
                             <option value="No">No</option>
                         </select>
                     </div>
-                    
                 </div>
                 
                 <div class="input-box">
                     <label for="query13">Tech Support:</label>
                     <div>
-                        <select name="query13" required>
+                        <select name="query13" id="query13" required>
                             <option value="Yes">Yes</option>
                             <option value="No">No</option>
                         </select>
                     </div>
-                    
                 </div>
                 
                 <div class="input-box">
                     <label for="query14">Streaming TV:</label>
                     <div>
-                        <select name="query14" required>
+                        <select name="query14" id="query14" required>
                             <option value="Yes">Yes</option>
                             <option value="No">No</option>
                         </select>
                     </div>
-                    
                 </div>
                 
                 <div class="input-box">
                     <label for="query15">Streaming Movies:</label>
                     <div>
-                        <select name="query15" required>
+                        <select name="query15" id="query15" required>
                             <option value="Yes">Yes</option>
                             <option value="No">No</option>
                         </select>
                     </div>
-                    
                 </div>
                 
                 <div class="input-box">
                     <label for="query16">Contract:</label>
                     <div>
-                        <select name="query16" required>
+                        <select name="query16" id="query16" required>
                             <option value="Month-to-month">Month to Month</option>
                             <option value="One year">One Year</option>
                             <option value="Two year">Two Year</option>
                         </select>
                     </div>
-                    
                 </div>
                 
                 <div class="input-box">
                     <label for="query17">Paperless Billing:</label>
                     <div>
-                        <select name="query17" required>
+                        <select name="query17" id="query17" required>
                             <option value="Yes">Yes</option>
                             <option value="No">No</option>
                         </select>
                     </div>
-                    
                 </div>
                 
                 <div class="input-box">
                     <label for="query18">Payment Method:</label>
                     <div>
-                        <select name="query18" required>
+                        <select name="query18" id="query18" required>
                             <option value="Electronic check">Electronic Check</option>
                             <option value="Mailed check">Mailed Check</option>
                             <option value="Bank transfer (automatic)">Bank Transfer</option>
                             <option value="Credit card (automatic)">Credit Card</option>
                         </select>
                     </div>
-                    
                 </div>
                 
                 <div class="input-box">
@@ -210,30 +200,68 @@
         </form>
 
         <div class="user-output">
-
-            <div class="model">
-                {% if outputRF %}
-                    <div>Random Forest Prediction:</div>
-                    {% if outputRF == 1 %}
-                        <span class="churn" style="color: red;">This customer will likely churn</span>
-                    {% else %}
-                        <span class="no-churn" style="color: green;">This customer will likely continue</span>
-                    {% endif %}
-                {% endif %}
+            <div class="model" id="rfResult" style="display: none;">
+                <div>Random Forest Prediction:</div>
+                <span id="rfText"></span>
             </div>
 
-            <div class="model">
-                {% if outputDF %}
-                    <div>Decision Tree Prediction:</div>
-                    {% if outputDF == 1 %}
-                        <span class="churn" style="color: red;">This customer will likely churn</span>
-                    {% else %}
-                        <span class="no-churn" style="color: green;">This customer will likely continue</span>
-                    {% endif %}
-                {% endif %}
+            <div class="model" id="dtResult" style="display: none;">
+                <div>Decision Tree Prediction:</div>
+                <span id="dtText"></span>
             </div>    
         </div>
     </div>
+
+    <script>
+        // UPDATE THIS URL after deploying to Render
+        const API_URL = 'https://customerchurnwebsite.onrender.com/api/predict';
+
+        document.getElementById('predictionForm').addEventListener('submit', async function(e) {
+            e. preventDefault();
+            
+            // Collect form data
+            const formData = {};
+            for (let i = 1; i <= 19; i++) {
+                formData[`query${i}`] = document.getElementById(`query${i}`).value;
+            }
+
+            try {
+                const response = await fetch(API_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                const result = await response.json();
+                
+                // Display Random Forest result
+                const rfResult = document.getElementById('rfResult');
+                const rfText = document.getElementById('rfText');
+                rfResult.style.display = 'block';
+                if (result.outputRF === 1) {
+                    rfText.innerHTML = '<span class="churn" style="color: red;">This customer will likely churn</span>';
+                } else {
+                    rfText. innerHTML = '<span class="no-churn" style="color: green;">This customer will likely continue</span>';
+                }
+
+                // Display Decision Tree result
+                const dtResult = document.getElementById('dtResult');
+                const dtText = document. getElementById('dtText');
+                dtResult.style.display = 'block';
+                if (result. outputDF === 1) {
+                    dtText.innerHTML = '<span class="churn" style="color: red;">This customer will likely churn</span>';
+                } else {
+                    dtText. innerHTML = '<span class="no-churn" style="color: green;">This customer will likely continue</span>';
+                }
+
+            } catch (error) {
+                alert('Error connecting to the prediction server.  Please try again.');
+                console.error('Error:', error);
+            }
+        });
+    </script>
 
 </body>
 
